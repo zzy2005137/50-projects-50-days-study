@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /*1vh is eqaul to 1% of your screen height.  1vw = 1% width */
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden; /*hidden: overflowing content will be hidden.*/
+  margin: 0;
+}
+
+/*
+1.flex will make the items in it become inline mode
+
+2. flex-direction --> main axis
+
+    justify-content:start(defaut) : defines the alignment along the main axis 
+    align-items:stretch(defaut) : defines  how flex items are laid out along the cross axis
+
+*/
