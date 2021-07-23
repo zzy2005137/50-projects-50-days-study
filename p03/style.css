@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #333;
+  color: #222;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: #fafafa;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  transition: transform 0.5s linear;
+  transform-origin: top left;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+  /* transition: transform 0.5s linear; */
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+
+  transition-delay: 0.2s;
+}
+
+/* -----------circle------------------- */
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: lightskyblue;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* height: 100px; */
+  background-color: transparent;
+  color: #fcfcfc;
+  border: 0;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.circle button#open {
+  top: 65%;
+  left: 60%;
+}
+
+.circle button#close {
+  top: 62%;
+  left: 20%;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+/* -----------------content------------------------ */
+
+.content {
+  background-color: #fafafa;
+  padding: 50px;
+  max-width: 960px;
+  margin: 50px auto;
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ---------nav------------- */
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 20px;
+  color: #fafafa;
+  font-size: 18px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  margin: 30px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  margin-right: 20px;
+}
+
+nav ul li + li {
+  margin-left: 18px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
