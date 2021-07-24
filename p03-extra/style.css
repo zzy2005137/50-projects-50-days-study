@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 1100px;
+  justify-content: center;
+  align-items: center;
+
+  /* overflow: hidden; */
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 800px;
+  height: 500px;
+}
+
+.item {
+  flex: 1;
+  transition: 0.7s ease-in-out;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.left {
+  background-image: url(https://images.unsplash.com/photo-1626525370698-95c969333aae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDd8eGpQUjRobGtCR0F8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60);
+}
+
+.right {
+  background-image: url(https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDl8eGpQUjRobGtCR0F8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+}
+
+.item:hover {
+  flex: 2;
+}
+
+.circle-container {
+  margin-top: 30px;
+  position: relative;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 30px;
+  /* border: #aaa 5px solid; */
+  border-radius: 50%;
+  background-color: cadetblue;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s linear;
+
+  color: white;
+  font-size: 20px;
+}
+
+.circle:hover {
+  /* transform: rotate(180deg); */
+  transform: translateX(50%);
+}
