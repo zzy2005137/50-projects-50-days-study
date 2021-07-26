@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.box {
+  background-color: cadetblue;
+  height: 200px;
+  width: 300px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: white;
+  font-size: 30px;
+  transition: transform 0.5s linear;
+  padding: 20px;
+}
+
+.box:nth-of-type(even) {
+  transform: translate(400%);
+}
+
+.box:nth-of-type(odd) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
