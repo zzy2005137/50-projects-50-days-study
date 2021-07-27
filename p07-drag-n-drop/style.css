@@ -8,18 +8,23 @@ body {
   font-family: "Muli", sans-serif;
 
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   margin: 0;
+  background-color: #348498;
+}
+.container {
+  display: flex;
 }
 
 .empty {
-  background-color: lavenderblush;
+  background-color: #f5f7fa;
   width: 150px;
   height: 150px;
-  border: 2px black solid;
+  border: 2px #d0dfe6 solid;
   margin: 20px;
 }
 
@@ -29,13 +34,23 @@ body {
   width: 145px;
   height: 145px;
 }
-/* 
+
 @media (max-width: 800px) {
-  body {
-    flex-direction: column;
+  .container {
+    flex-wrap: wrap;
   }
-} */
+}
 
 .invisible {
   display: none;
+}
+
+.hovered {
+  border: 2px gray dashed;
+  background-color: honeydew;
+}
+
+header h1 {
+  color: #f5f7fa;
+  margin: 50px;
 }
